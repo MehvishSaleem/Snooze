@@ -1,19 +1,5 @@
-There are 5 Python programs here :
+## r/meta-bot
 
- - `reddit_preprocess.py` Preprocesses the data using NLTK and groups comments of the subreddit.
- This code generates 4 files : 
- 
-    1. Subreddits and comments file: it is a parquet file which is used as a 
-    input in the `topic_modeling.py` file. 
-    2. Up Votes from high to low : it is a csv file which has a number of 
-    upvotes sorted high to low.
-    3. Number of comments: it is a csv file has number of comments sorted high to low. 
-    4. Sorted Ratio : Ratio of upvotes to comments 
-    
- - `topic_modeling.py` Implementation of LDA Model. This code generates 2 files :
-   
-    1. Topic Distribution. 
-    2. Top words of each topic.
-   
-   For visualization, please refer to one_page.html (/webapp/templates/)
-   For t-SNE model training and fitting, please refer to TSNE_formulate.py (/webapp/)
+This project identifies the underlying structures of the reddit community in order to deduce the interaction patterns amongst various subreddits. In order to achieve this purpose, we crafted our own set of features from the comments posted on the subreddits and clustered them into “meta-reddits” using topic modeling and t-distributed stochastic neighbour embedding ( t-SNE). A meta-reddit can be defined as a group of similar subreddits. Furthermore, in order to analyze the community behaviour, we collected statistics and deduced some interesting patterns between various reddit features. 
+
+
